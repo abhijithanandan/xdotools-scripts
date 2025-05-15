@@ -3,11 +3,13 @@
 # --- Configuration: Define your desired crop region ---
 # Top-left corner of your desired region (X1, Y1)
 X1=30
-Y1=35
+# Y1=35 # Springboot
+Y1=05 # IPTM
 
 # Bottom-right corner of your desired region (X2, Y2)
-X2=1320
-Y2=675
+X2=1360
+# Y2=700 # Springboot
+Y2=740 # IPTM
 # --- End Configuration ---
 
 # Calculate crop geometry for ImageMagick (WidthxHeight+X_offset+Y_offset)
@@ -114,3 +116,12 @@ echo "--- Script End ---"
 
 xdotool key "Ctrl+Alt+Left"
 
+xdotool mousemove 866 444
+xdotool click 1
+xdotool key "Control_L+End"
+sleep 0.5
+xdotool click 1
+sleep 0.05
+xdotool key "Return"
+sleep 0.05
+xdotool key "Ctrl+v"
